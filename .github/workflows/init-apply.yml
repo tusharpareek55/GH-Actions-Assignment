@@ -34,6 +34,7 @@ jobs:
           aws-region : ap-south-1
 
       - name: Deploy infrastructure with Terraform
+        working-directory: ${{env.working-directory}}
         run: |
           terraform init
           terraform plan
